@@ -1,0 +1,24 @@
+{
+  "name": "reddit-reader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cen19/reddit-reader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cen19/reddit-reader/issues"
+  },
+  "homepage": "https://github.com/cen19/reddit-reader#readme",
+  "dependencies": {
+    "react": "^16.0.0"
+  }
+}
