@@ -7,13 +7,24 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      login: null
+      login: null,
+      redditCreds: null
     };
     // bindings
+    this.handleRedditLogin = this.handleRedditLogin.bind(this);
+    this.handleLocalSave = this.handleLocalSave.bind(this);
   }
 
   handleRedditLogin() {
-
+    // fetch('http://localhost:3000/redditLogin', {method: 'GET'})
+    //   .then(res => res.json())
+    //   .then(data => this.setState({
+    //     redditCreds: data
+    //   }))
+    //   .catch(err => {
+    //     console.log('Error logging in with Reddit, ', err)
+    //   })
+    console.log('working button');
   }
 
   handleLocalSave() {}
@@ -25,7 +36,7 @@ class Main extends React.Component {
       <div>
         <LocalSave />
         <br></br>
-        <RedditLogin />
+        <RedditLogin login={this.handleRedditLogin} />
       </div>
     );
   }

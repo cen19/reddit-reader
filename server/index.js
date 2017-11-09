@@ -7,15 +7,7 @@ let app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
-// app.get('/', (req, res) => {
-//   // if (!req.body) {
-//   //   res.redirect(config.url);
-//   // } else {
-//   //   res.status(302).send(req.body);
-//   // }
-// });
-
-app.get('/authed', (req, res) => {
+app.get('/redditLogin', (req, res) => {
   let codeIdx = req.url.indexOf('code=') + 5;
   let code = req.url.slice(codeIdx);
   let grantType = 'authorization_code';
@@ -38,7 +30,19 @@ app.get('/authed', (req, res) => {
         res.redirect('http://localhost:3000');
       }
     });
+});
 
+app.get('/authed', (req, res) => {
+  // should be the page to load the posts from when you're logged in
+  
+});
+
+app.post('/authed/sub/:subreddit', (req, res) => {
+
+});
+
+app.post('/authed/unsub/:subreddit', (req, res) => {
+  
 });
 
 app.listen(3000, function() {
