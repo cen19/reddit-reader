@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -d --watch --progress --colors",
-    "server-dev": "nodemon server/index/js"
+    "server-dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/cen19/reddit-reader#readme",
   "dependencies": {
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },

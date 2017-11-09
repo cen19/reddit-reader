@@ -3,3 +3,6 @@ node_modules
 
 # compilted directory
 client/dist/bundle.js
+
+#clientID
+client/src/config.js
