@@ -16,14 +16,17 @@ class Main extends React.Component {
   }
 
   handleRedditLogin() {
-    // fetch('http://localhost:3000/redditLogin', {method: 'GET'})
-    //   .then(res => res.json())
-    //   .then(data => this.setState({
-    //     redditCreds: data
-    //   }))
-    //   .catch(err => {
-    //     console.log('Error logging in with Reddit, ', err)
-    //   })
+    fetch('http://localhost:3000/redditLogin', {method: 'GET'})
+      .then(res => {
+        console.log('in here~~~');
+        res.formData();
+      })
+      .then(function(data) {
+        console.log(data);
+      })
+      .catch(err => {
+        console.log('Error logging in with Reddit, ', err)
+      })
     console.log('working button');
   }
 
