@@ -8,6 +8,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/redditLogin', (req, res) => {
+  //
+  // Redirect to the reddit login url
+
+  res.redirect(config.url);
+
   console.log('Attempting login with reddit');
   let codeIdx = req.url.indexOf('code=') + 5;
   let code = req.url.slice(codeIdx);
@@ -24,9 +29,8 @@ app.get('/redditLogin', (req, res) => {
     },
     body: parameters
   }).then(res => {
-    console.log('res', res);
-    res.json();
-
+    console.log('got response');
+    res.FormData();
   })
     .then(data => res.send(data));
 });

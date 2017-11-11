@@ -16,18 +16,20 @@ class Main extends React.Component {
   }
 
   handleRedditLogin() {
-    fetch('http://localhost:3000/redditLogin', {method: 'GET'})
-      .then(res => {
-        console.log('in here~~~');
-        res.formData();
-      })
-      .then(function(data) {
-        console.log(data);
-      })
-      .catch(err => {
-        console.log('Error logging in with Reddit, ', err)
-      })
-    console.log('working button');
+    location.href = Config.url;
+    // fetch(Config.url, {method: 'GET', mode: 'no-cors'})
+    //   .then(res => {
+    //     console.log('in here~~~');
+    //     console.log(res.json());
+    //     res.json();
+    //   })
+    //   .then(function(data) {
+    //     console.log('potential data', data);
+    //   })
+    //   .catch(err => {
+    //     console.log('Error logging in with Reddit, ', err)
+    //   })
+    // console.log('working button');
   }
 
   handleLocalSave() {}
